@@ -3,6 +3,7 @@ package com.insightfullogic.java8.answers.chapter3;
 import com.insightfullogic.java8.examples.chapter1.Album;
 import com.insightfullogic.java8.examples.chapter1.Artist;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
 
@@ -23,5 +24,9 @@ public class Question1 {
         return input.stream()
                     .filter(album -> album.getTrackList().size() <= 3)
                     .collect(toList());
+    }
+
+    public static void main(String[] args) {
+        System.out.println(getNamesAndOrigins(Arrays.asList(new Artist("11123l", "fasfd"), new Artist("22222", "bbb"))));
     }
 }
